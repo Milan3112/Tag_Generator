@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Price Tag Generator</title>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="main">
+    
+        <div class="container">
+            <h1>Product Price Tag Generator</h1>
+            <p>Generate price tag of your product with this generator tool.</p>
+
+            <form class="input-container">
+                <div class="form-group">
+                    <label for="productNameInput">Product Name:</label>
+                    <input type="text" id="productNameInput" placeholder="Enter Product Name">
+                </div>
+                <div class="form-group">
+                    <label for="productPriceInput">Product Price:</label>
+                    <input type="number" id="productPriceInput" placeholder="Enter Product Price">
+                </div>
+                <button type="button" onclick="generatePriceTag()">Generate Price Tag</button>
+            </form>
+
+            <div class="result-container" style="display: none;">
+                <div class="result">
+                    <h2 id="productName"></h2>
+                    <h2 id="productPrice"></h2>
+    
+                    <img src="" alt="Barcode" id="barcode">
+                    <div id="barcodeNumber"></div>
+                </div>
+                <div class="buttons">
+                    <button onclick="location.reload()">Generate Again</button>
+                    <button onclick="downloadPriceTag()">Download Price Tag</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode/dist/JsBarcode.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
+    <!-- Script JS -->
+    <script src="./script.js"></script>
+</body>
+</html>
